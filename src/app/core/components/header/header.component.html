@@ -1,0 +1,38 @@
+<header>
+  <div class="head_container">
+    <div class="header_initial">
+        <img src="./assets/img/icons/logo.png">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Search for anything">
+           <button type="submit" class="searchButton">
+             <img src="./assets/img/icons/search.png" class="searchIcon" >
+          </button>
+      </div>
+    </div>
+   
+    <div class="menu" id="myTopnav">
+      <ul>
+        <a style="font-size:15px;" class="icon" (click)="toggle()">&#9776;</a>
+        <li><a>Docs</a></li>
+        <li><img src="./assets/img/icons/notification.png"></li>
+        <li> <img src="./assets/img/icons/avatar_top.png"> </li>
+        <li>
+          <div class="select-dropdown">
+            <select>
+              <option value="Option 1">Adedeji</option>
+            </select>
+          </div> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div id="mySidenav" class="sidenav">
+    <a  class="closebtn" (click)="toggle()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Request Quote</a>
+    <a href="#">Contact</a>
+    <p style="color: #1c3664; text-align: center">Hubover &copy; 2017</p>
+</div>

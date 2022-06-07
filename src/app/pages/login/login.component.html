@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="logo">
+    <img src="./assets/img/icons/logo.png">
+  </div>
+  <main class="grid">
+    <div class="login-image">
+      <img src="./assets/img/icons/login.png">
+    </div>
+    <div class="login-form">
+      <form>
+        <p class="welcome">Welcome!</p>
+        <p class="tiny-text">Enter details to login.</p>
+        <div class="input-div">
+          <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          id="email"
+          autocomplete="email"
+          class="input"
+          />
+          <div class="input-cont mt-5 relative">
+            <div class="relative mt-1">
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                [type]="hide ? 'password' : 'text'"
+                id="password"
+                autocomplete="password"
+                class="input"
+              />
+              <p (click)="hide = !hide"  *ngIf="hide"> Show </p>
+              <p (click)="hide = !hide"  *ngIf="!hide"> Hide </p>
+            </div>
+          </div>
+          <p class="forgot-text"> Forgot PASSWORD?</p>
+          <button (click)="login()" class="login-button"> LOG IN </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>

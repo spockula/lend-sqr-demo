@@ -1,0 +1,70 @@
+
+    <aside class="sidebar-aside">
+        <div class="sidebar-main">
+          <div class="side">
+            <img src="./assets/img/icons/guarantor.png">
+            <p> Switch Organization </p>
+          </div>
+          <div class="side-active">
+            <img src="./assets/img/icons/dashboard.png">
+            <p  routerLink="/dashboard"> Dashboard </p>
+          </div>
+          <p class="customers"> CUSTOMERS </p>
+          <ul class="list-class space-y-6">
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'all-users' || selectedTab === '',
+              'not-active' : selectedTab === 'guarantor' || selectedTab == 'loans' 
+              || selectedTab === 'decision' ||  selectedTab === 'savings' ||  selectedTab === 'requests' ||  selectedTab === 'whitelist'  }"
+               (click)="switchTabs('all-users')"> 
+               <span routerLink="/all-users"> <img src="./assets/img/icons/users-sidebar.png">  Users </span> 
+              </li>
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'guarantor',
+              'not-active' : selectedTab === 'all-users' || selectedTab === 'loans' || selectedTab === 'guarantor' || selectedTab === 'decision' 
+              || selectedTab === '' ||  selectedTab === 'savings' ||  selectedTab === 'requests' ||  selectedTab === 'whitelist'   }" 
+              (click)="switchTabs('guarantor')"> 
+                <span
+                  class=""> <img src="./assets/img/icons/users-side.png"> Guarantors  
+                </span> 
+              </li>
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'loans',
+              'not-active' : selectedTab === 'all-users' || selectedTab === 'guarantor' || selectedTab === 'decision' 
+              ||  selectedTab === '' ||  selectedTab === 'savings' ||  selectedTab === 'requests' ||  selectedTab === 'whitelist'  }" 
+              (click)="switchTabs('loans')"> 
+                <span
+                  class="ml-3"> <img src="./assets/img/icons/sack.png"> Loans 
+                </span>
+              </li>
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'decision',
+              'not-active' : selectedTab === 'all-users' || selectedTab === 'loans' || selectedTab === 'guarantor' 
+              || selectedTab === '' ||  selectedTab === 'savings' ||  selectedTab === 'requests' ||  selectedTab === 'whitelist'  }" 
+              (click)="switchTabs('decision')"> 
+                <span
+                  class=""> <img src="./assets/img/icons/users-side.png"> Decision Models  
+                </span> 
+              </li>
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'savings',
+              'not-active' : selectedTab === 'all-users' || selectedTab === 'guarantor' || selectedTab === 'decision' 
+              || selectedTab === '' ||  selectedTab === 'loans' ||  selectedTab === 'requests' ||  selectedTab === 'whitelist' }" 
+              (click)="switchTabs('savings')"> 
+                <span
+                  class="ml-3"> <img src="./assets/img/icons/sack.png"> Savings 
+                </span>
+              </li>
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'requests',
+              'not-active' : selectedTab === 'all-users' || selectedTab === 'loans' || selectedTab === 'guarantor' 
+              || selectedTab === '' ||  selectedTab === 'savings' ||  selectedTab === 'decision' ||  selectedTab === 'whitelist'  }" 
+              (click)="switchTabs('requests')"> 
+                <span
+                  class=""> <img src="./assets/img/icons/users-side.png"> Loan Requests  
+                </span> 
+              </li>
+              <li [ngClass]="{'sidebar-text text-try': selectedTab === 'whitelist',
+              'not-active' : selectedTab === 'all-users' || selectedTab === 'guarantor' || selectedTab === 'approval'
+              || selectedTab === ''  ||  selectedTab === 'savings' ||  selectedTab === 'requests' ||  selectedTab === 'whitelist' }" 
+              (click)="switchTabs('whitelist')"> 
+                <span
+                  class="ml-3"> <img src="./assets/img/icons/sack.png"> Whitelists 
+                </span>
+              </li>
+          </ul>
+        </div>
+    </aside>

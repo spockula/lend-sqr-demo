@@ -1,0 +1,119 @@
+<div class="container">
+  <main class="main-body">
+    <p class="title"> Users </p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card_div">
+          <img src="./assets/img/icons/users.png">
+          <p class="card-title"> Users </p>
+          <p class="card-numbers"> {{users.length}} </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_div">
+          <img src="./assets/img/icons/others.png">
+          <p class="card-title"> Active Users </p>
+          <p class="card-numbers"> {{users.length}} </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_div">
+          <img src="./assets/img/icons/loans.png">
+          <p class="card-title"> Users with Loans </p>
+          <p class="card-numbers"> 12,453 </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_div">
+          <img src="./assets/img/icons/savings.png">
+          <p class="card-title"> Users with Savings </p>
+          <p class="card-numbers"> 102,453 </p>
+        </div>
+      </div>
+    </div>
+    <div class="table-parent">
+      <div class="table-child table-user">
+        <table>
+          <thead>
+            <tr>
+              <th class="table-header">
+                <span > Organisation </span> <img src="./assets/img/icons/filter-results-button.png">
+              </th>
+              <th class="table-header">
+                <span> Username </span> <img src="./assets/img/icons/filter-results-button.png">
+              </th>
+              <th class="table-header">
+                <span> Email </span> <img src="./assets/img/icons/filter-results-button.png">
+              </th>
+              <th class="table-header">
+                <span> Phone number </span> <img src="./assets/img/icons/filter-results-button.png">
+              </th>
+              <th class="table-header">
+                <span> Date joined </span> <img src="./assets/img/icons/filter-results-button.png">
+              </th>
+              <th class="table-header">
+                <span> Status </span> <img src="./assets/img/icons/filter-results-button.png">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of users; let i = index;">
+              <td class="main-table">
+                <span (click)="routeToDetails(item['id'])"> {{item['orgName']}} </span>
+              </td>
+              <td class="main-table">
+                <span> {{item['userName']}} </span>
+              </td>
+              <td class="main-table">
+                <span> {{item['email']}} </span>
+              </td>
+              <td class="main-table">
+                <span> {{item['phoneNumber']}} </span>
+              </td>
+              <td class="main-table">
+                <span> {{item['createdAt'] | date: "YYYY-MM-dd, h:mm a"}} </span>
+              </td>
+              <td class="main-table">
+                <button class="table-button-inactive"> <span> Inactive</span> </button>
+              </td>
+              <td>
+                <img src="./assets/img/icons/ellipsis.png">
+              </td>
+            </tr>
+            <tr>
+              <td class="main-table">
+                <span> Lendsqr </span>
+              </td>
+              <td class="main-table">
+                <span> Adedeji </span>
+              </td>
+              <td class="main-table">
+                <span> adedeji@lendsqr.com </span>
+              </td>
+              <td class="main-table">
+                <span> 08078903721 </span>
+              </td>
+              <td class="main-table">
+                <span> May 15, 2020 10:00 AM </span>
+              </td>
+              <td class="main-table">
+                <button class="table-button-pending"> <span> pending</span> </button>
+              </td>
+              <td>
+                <img (click)="toggle(1)" src="./assets/img/icons/ellipsis.png">
+                <div class="dropdown-inner" *ngIf="showMe">
+                  <div class="edit-div">
+                    <h6 class="drop-text"> View Details </h6>
+                    <h6 class="drop-text"> Blacklist User </h6>
+                    <h6 class="drop-text"> Activate User </h6>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+

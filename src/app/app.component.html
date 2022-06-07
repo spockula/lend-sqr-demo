@@ -1,0 +1,8 @@
+<app-header *ngIf="showHeader !== false"></app-header>
+<div class="main">
+  <app-sidebar *ngIf="showSidebar !== false">  </app-sidebar>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

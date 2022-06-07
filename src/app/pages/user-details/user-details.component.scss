@@ -1,0 +1,268 @@
+.container {
+  align-items: center;
+  padding-left: 240px;
+  padding-right: 40px;
+  .main-body {
+    padding: 10px;
+    .title {
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      padding: 10px;
+      color: #213F7D;
+    }
+  }
+}
+
+.d-table {
+  display: table;
+  width: 100%;
+}
+
+.d-table-cell {
+  display: table-cell;
+}
+
+.tar {
+  text-align: right;
+}
+
+.blacklist {
+  width: 170px;
+  height: 40px;
+  box-sizing: border-box;
+  margin: 10px;
+  border: 1px solid #E4033B;
+  border-radius: 8px;
+  background: transparent;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #E4033B;
+}
+
+.activate {
+  background: transparent;
+  width: 170px;
+  height: 40px;
+  left: 1210px;
+  top: 210px;
+  border: 1px solid #39CDCC;
+  border-radius: 8px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #39CDCC;
+}
+
+.card-main {
+  // align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+.card-mini {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  width: 47%;
+}
+
+.card-holder {
+  padding: 20px;
+  width: 9rem;
+  img {
+    width: 100px;
+  }
+  .another {
+    display: flex;
+  }
+}
+
+.card-holder1 {
+  padding: 20px;
+  width: 10rem;
+  img {
+    width: 100px;
+  }
+  .another {
+    display: flex;
+  }
+}
+
+.card-holder2 {
+  padding: 20px;
+  width: 9rem;
+  img {
+    width: 100px;
+  }
+  .another {
+    display: flex;
+  }
+}
+
+.card-holder3 {
+  padding: 20px;
+  width: 12rem;
+  img {
+    width: 100px;
+  }
+  .another {
+    display: flex;
+  }
+}
+
+.tabs-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  padding-left: 30px;
+}
+
+.easy-tab {
+  border-bottom: 2px solid #39CDCC;
+  width: 170px;
+}
+
+.tab-text {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: center;
+  margin: 0;
+  padding-bottom: 5px;
+  color: #39CDCC;
+}
+
+.other-text {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.extra-container {
+  padding-top: 30px;
+  width: 100%;
+  .last-container {
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+    border-bottom: 1px gray;
+  }
+}
+
+.first-section {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  width: 100%;
+}
+
+.personal {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #213F7D;
+  margin: 0;
+}
+
+.name {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  padding-top: 20px;
+  /* identical to box height */
+  color: #213F7D;
+  margin: 0;
+}
+
+.border-update {
+  border-right: 1px solid #545F7D;
+  height: 80px;
+}
+
+.tiny-title {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding-left: 22px;
+  padding-top: 23px;
+  color: #545F7D;
+}
+
+.name-tag {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 5px;
+  margin: 0;
+  color: #545F7D;
+}
+
+.label-tag {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #545F7D;
+  margin: 0;
+  padding-top: 20px;
+  .main {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.back-button-text {
+  padding-top: 30px;
+  padding-left: 20px;
+  margin: 0;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 10px;
+  margin: 0;
+  /* identical to box height */
+  color: #545F7D;
+}
