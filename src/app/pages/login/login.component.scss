@@ -1,180 +1,159 @@
 .container {
   width: 100%;
-  // min-height: 100vh;
   padding: 50px;
-    .logo {
-      margin-top: 40px;
-      align-items: flex-start;
+  .logo {
+    margin-top: 40px;
+    align-items: flex-start;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    margin-top: 48px;
+    .login-image img {
+      width: 100%;
+      height: 337.57px;
+      object-fit: cover;
+      margin-top: 6rem;
     }
+    .login-form {
+      padding-top: 25px;
+      .welcome{
+        font-family: 'Overpass', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 55px;
+        margin: 0;
+        letter-spacing: -0.04em;
+        color: #213F7D;
+      }
+      .tiny-text {
+        font-family: 'Overpass', sans-serif;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 27px;
+        margin: 0;
+        color: #545F7D;
+      }
+      .input-div {
+        margin-top: 55px;
+        .input {
+          margin-top: 1rem;
+          padding-left: 0.5rem;
+          display: block;
+          width: 447px;
+          font-family: 'Overpass', sans-serif;
+          font-style: normal;
+          font-weight: 200;
+          font-size: 0.875rem/* 14px */;
+          line-height: 19px/* 20px */;
+          outline: 2px solid transparent;
+          opacity: 0.6;
+          outline-offset: 2px;
+          height: 50px;
+          color: #545F7D;
+          background: #FFFFFF;
+          border: 2px solid rgba(84, 95, 125, 0.15);
+          border-radius: 5px;
+        }
+        .input-cont p {
+          font-family: 'Overpass', sans-serif;
+          position: absolute;
+          top: 53%;
+          right: 14%;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #39CDCC;
+        }
+        .forgot-text {
+          font-family: 'Overpass', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: left;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #39CDCC;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+        .login-button {
+          position: relative;
+          width: 447px;
+          height: 48px;
+          background-color: #39CDCC !important;
+          justify-content: center;
+          border-width: 1px;
+          border-color: transparent;
+          font-weight: 500;
+          border-radius: 8px;
+          color: white;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 60px;
-  margin-top: 48px;
-}
-
-.login-image img {
-  width: 100%;
-  height: 337.57px;
-  object-fit: cover;
-  margin-top: 6rem;
-}
-
-.login-form {
-  padding-top: 25px;
-}
-
-.welcome{
-  font-family: 'Overpass', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 55px;
-  margin: 0;
-  /* identical to box height */
-  letter-spacing: -0.04em;
-  color: #213F7D;
-}
-
-.tiny-text {
-  font-family: 'Overpass', sans-serif;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 20px;
-  line-height: 27px;
-  margin: 0;
-  /* identical to box height */
-  color: #545F7D;
-}
-
-.input-div {
-  margin-top: 55px;
-}
-
-.input {
-  margin-top: 1rem;
-  padding-left: 0.5rem;
-  display: block;
-  width: 447px;
-  font-family: 'Overpass', sans-serif;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 0.875rem/* 14px */;
-  line-height: 19px/* 20px */;
-  outline: 2px solid transparent;
-  opacity: 0.6;
-  outline-offset: 2px;
-  height: 50px;
-  color: #545F7D;
-  background: #FFFFFF;
-  border: 2px solid rgba(84, 95, 125, 0.15);
-  border-radius: 5px;
-}
-
-.input-cont p {
-  font-family: 'Overpass', sans-serif;
-  position: absolute;
-  top: 53%;
-  right: 14%;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #39CDCC;
-}
-
-.password-container {
-  position: relative;
-}
-
-.forgot-text {
-  font-family: 'Overpass', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: left;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #39CDCC;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.login-button {
-  position: relative;
-  width: 447px;
-  height: 48px;
-  background-color: #39CDCC !important;
-  justify-content: center;
-  border-width: 1px;
-  border-color: transparent;
-  font-weight: 500;
-  border-radius: 8px;
-  color: white;
-  margin: 0;
-}
 
 @media screen and (max-width: 767px) {
   .container{
     padding: 0;
-  }
-  .grid {
-    display: flex;
-    flex-direction: column;
-    padding-left: 30px;
-    padding-right: 30px;
-    grid-gap: 0px;
-    margin: 0;
-  }
-
-  .login-image {
-    img {
-      width: 100% !important;
-      height: auto;
-      object-fit: cover;
+    .logo {
+      margin-top: 40px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
-
-    &:not(.highlight-card) {
-      height: auto;
+    .grid {
+      display: flex;
+      flex-direction: column;
+      padding-left: 30px;
+      padding-right: 30px;
+      grid-gap: 0px;
+      margin: 0;
+      .login-image {
+        img {
+          width: 100% !important;
+          height: auto;
+          object-fit: cover;
+        }
+    
+        &:not(.highlight-card) {
+          height: auto;
+        }
+      }
+      .login-form {
+        padding-top: 30px;
+        .input-div {
+          padding-bottom: 30px;
+          .input {
+            width: 296px;
+            position: relative;
+          }
+          .login-button {
+            width: 308px;
+          }
+          .input-cont p {
+            top: 15%;
+            right: 6%;
+            position: absolute;
+          }
+          .relative {
+            position: relative;
+          }
+        }
+      }
     }
   }
-  .login-form {
-      padding-top: 30px;
-  }
-  .input {
-    width: 296px;
-    position: relative;
-  }
-
-  .login-button {
-    width: 308px;
-  }
-
-  .input-div {
-    padding-bottom: 30px;
-  }
-
-  .container .logo {
-    margin-top: 40px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-
-  .relative {
-    position: relative;
-  }
-
-  .input-cont p {
-    top: 15%;
-    right: 6%;
-    position: absolute;
-  }
+ 
 }

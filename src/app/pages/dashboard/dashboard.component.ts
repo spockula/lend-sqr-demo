@@ -24,7 +24,6 @@ export class DashboardComponent implements OnInit {
     const checkUsersSaved = localStorage.getItem('users');
     if (checkUsersSaved !== null) {
       this.users =  JSON.parse(localStorage.getItem("users")!) 
-      console.log('this is', this.users)
     } else {
       this.getUsers();
     }
@@ -40,7 +39,7 @@ export class DashboardComponent implements OnInit {
 
   toggle(id: number) {
     this.showMe = !this.showMe;
-    // this.ellipseIndex = id;
+    this.ellipseIndex = id;
   }
 
   routeToDetails(userId: any) {

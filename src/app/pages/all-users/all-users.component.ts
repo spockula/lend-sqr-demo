@@ -25,7 +25,6 @@ export class AllUsersComponent implements OnInit {
     const checkUsersSaved = localStorage.getItem('users');
     if (checkUsersSaved !== null) {
       this.users =  JSON.parse(localStorage.getItem("users")!)
-      console.log('hs', this.users)
     } else {
       this.getUsers();
     }
@@ -43,7 +42,6 @@ export class AllUsersComponent implements OnInit {
 
   getUsers() {
     this.mainService.getAllUsers().subscribe((data: any) => {
-      console.log('hey', data)
       localStorage.setItem("users", JSON.stringify(data));
     }, err => {
       console.log('there was an error', err)

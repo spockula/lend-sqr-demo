@@ -8,7 +8,7 @@ import  sidebarJson from 'src/assets/data/sidebar.json';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  selectedTab: string = 'users';
+  selectedTab: string = '';
   backHome: boolean = true;
   sideNav = sidebarJson[0];
 
