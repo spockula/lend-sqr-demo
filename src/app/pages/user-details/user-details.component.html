@@ -11,152 +11,160 @@
     </div>
 
     <div class="card-main">
-      <div class="card-mini"> 
+      <div class="card-mini">
         <div class="card-holder">
           <img src="./assets/img/icons/avatar.png">
         </div>
-        <div class="card-holder1">
-          <h6 class="name">{{user?.profile.firstName}} {{user?.profile.lastName}}</h6>
-          <h5 class="name-tag">{{user?.accountNumber}}</h5>
-          
-        </div>
-        <div class="card-holder2">
-          <h6 class="tiny-title">User’s Tier</h6>
-          <!-- <h5 class="name-tag">LSQFf587g90</h5> -->
-        </div>
-        <div class="card-holder3">
-          <h6 class="name">₦{{user?.accountBalance}}</h6>
-          <h5 class="name-tag">{{user?.profile.bvn}} /Providus Bank</h5>
-        </div>
-        <div class="tabs-container">
-          <div class="easy-tab">
-            <h4 class="tab-text"> General Details </h4>
+        <div class="card-holder__container">
+          <div class="card-holder__content">
+            <h6 class="name">{{user?.profile.firstName}} {{user?.profile.lastName}}</h6>
+            <h5 class="name-tag">{{user?.accountNumber}}</h5>
           </div>
+          <div class="card-holder__content">
+            <h6 class="tiny-title">User’s Tier</h6>
+            <h5 class="name-tag">LSQFf587g90</h5>
+          </div>
+          <div class="card-holder__content">
+            <h6 class="name">₦{{user?.accountBalance}}</h6>
+            <h5 class="name-tag">{{user?.profile.bvn}} /Providus Bank</h5>
+          </div>
+          </div>
+        </div>
+      <div class="tabs-container">
+        <div class="easy-tab">
+          <h4 class="tab-text"> General Details </h4>
+        </div>
+        <div class="tabless">
+          <h4 class="tab-text-black"> Documents </h4>
+        </div>
+        <div class="tabless">
+          <h4 class="tab-text-black"> Bank Details </h4>
+        </div>
+        <div class="tabless">
+          <h4 class="tab-text-black"> Loans </h4>
+        </div>
+        <div class="tabless">
+          <h4 class="tab-text-black"> Savings </h4>
+        </div>
+        <div class="tabless">
+          <h4 class="tab-text-black last-tab"> App and System </h4>
         </div>
       </div>
     </div>
     <div class="extra-container">
       <div class="last-container">
-        <p class="personal"> Personal Information </p>
-        <div class="first-section">
-          <div class="label-tag">
-            <h5 class="main"> full Name </h5>
-            <h5 class="name-tag">{{user?.profile.firstName}} {{user?.profile.lastName}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Phone Number </h5>
-            <h5 class="name-tag">{{user?.phoneNumber}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Email Address </h5>
-            <h5 class="name-tag">{{user?.email}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Bvn </h5>
-            <h5 class="name-tag">{{user?.profile.bvn}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Gender </h5>
-            <h5 class="name-tag">{{user?.profile.gender}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Marital status </h5>
-            <h5 class="name-tag">Single</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Children </h5>
-            <h5 class="name-tag">None</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Type of residence </h5>
-            <h5 class="name-tag">Parent’s Apartment</h5>
-          </div>
-        </div>
-      </div>
-      <div class="last-container">
-        <p class="personal"> Education and Employment </p>
-        <div class="first-section">
-          <div class="label-tag">
-            <h5 class="main"> level of education </h5>
-            <h5 class="name-tag">{{user?.education.level}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> employment status </h5>
-            <h5 class="name-tag">{{user?.education.employmentStatus}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> sector of employment </h5>
-            <h5 class="name-tag">{{user?.education.sector}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Duration of employment </h5>
-            <h5 class="name-tag">{{user?.education.duration}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> office email </h5>
-            <h5 class="name-tag">{{user?.education.officeEmail}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Monthly income </h5>
-            <h5 class="name-tag">₦{{user?.education.monthlyIncome[0]}}- ₦{{user?.education.monthlyIncome[1]}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> loan repayment </h5>
-            <h5 class="name-tag">{{user?.education.loanRepayment}}</h5>
+        <div class="last_container_content">
+          <p class="personal"> Personal Information </p>
+          <div class="first-section">
+            <div class="label-tag">
+              <h5 class="main"> full Name </h5>
+              <h5 class="name-tag">{{user?.profile.firstName}} {{user?.profile.lastName}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Phone Number </h5>
+              <h5 class="name-tag">{{user?.phoneNumber}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Email Address </h5>
+              <h5 class="name-tag">{{user?.email}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Bvn </h5>
+              <h5 class="name-tag">{{user?.profile.bvn}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Gender </h5>
+              <h5 class="name-tag">{{user?.profile.gender}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Marital status </h5>
+              <h5 class="name-tag">Single</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Children </h5>
+              <h5 class="name-tag">None</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Type of residence </h5>
+              <h5 class="name-tag">Parent’s Apartment</h5>
+            </div>
           </div>
         </div>
       </div>
       <div class="last-container">
-        <p class="personal"> Socials </p>
-        <div class="first-section">
-          <div class="label-tag">
-            <h5 class="main"> Twitter </h5>
-            <h5 class="name-tag">{{user?.socials.twitter}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Facebook </h5>
-            <h5 class="name-tag">{{user?.socials.facebook}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Instagram </h5>
-            <h5 class="name-tag">{{user?.socials.instagram}}</h5>
+        <div class="last_container_content">
+          <p class="personal"> Education and Employment </p>
+          <div class="first-section">
+            <div class="label-tag">
+              <h5 class="main"> level of education </h5>
+              <h5 class="name-tag">{{user?.education.level}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> employment status </h5>
+              <h5 class="name-tag">{{user?.education.employmentStatus}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> sector of employment </h5>
+              <h5 class="name-tag">{{user?.education.sector}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Duration of employment </h5>
+              <h5 class="name-tag">{{user?.education.duration}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> office email </h5>
+              <h5 class="name-tag">{{user?.education.officeEmail}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Monthly income </h5>
+              <h5 class="name-tag">₦{{user?.education.monthlyIncome[0]}}- ₦{{user?.education.monthlyIncome[1]}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> loan repayment </h5>
+              <h5 class="name-tag">{{user?.education.loanRepayment}}</h5>
+            </div>
           </div>
         </div>
       </div>
       <div class="last-container">
-        <p class="personal"> Guarantor </p>
-        <div class="first-section">
-          <div class="label-tag">
-            <h5 class="main"> full Name </h5>
-            <h5 class="name-tag">{{user?.guarantor.firstName}} {{user?.guarantor.firstName}}</h5>
+        <div class="last_container_content">
+          <p class="personal"> Socials </p>
+          <div class="first-section">
+            <div class="label-tag">
+              <h5 class="main"> Twitter </h5>
+              <h5 class="name-tag">{{user?.socials.twitter}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Facebook </h5>
+              <h5 class="name-tag">{{user?.socials.facebook}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Instagram </h5>
+              <h5 class="name-tag">{{user?.socials.instagram}}</h5>
+            </div>
           </div>
-          <div class="label-tag">
-            <h5 class="main"> Phone Number </h5>
-            <h5 class="name-tag">{{user?.guarantor.phoneNumber}}</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Email Address </h5>
-            <h5 class="name-tag">grace@gmail.com</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Relationship </h5>
-            <h5 class="name-tag">07060780922</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> full Name</h5>
-            <h5 class="name-tag">Female</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Phone Number </h5>
-            <h5 class="name-tag">Single</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Email Address </h5>
-            <h5 class="name-tag">None</h5>
-          </div>
-          <div class="label-tag">
-            <h5 class="main"> Relationship </h5>
-            <h5 class="name-tag">Parent’s Apartment</h5>
+        </div>
+      </div>
+      <div class="last-container">
+        <div class="last_container_content">
+          <p class="personal"> Guarantor </p>
+          <div class="first-section">
+            <div class="label-tag">
+              <h5 class="main"> full Name </h5>
+              <h5 class="name-tag">{{user?.guarantor.firstName}} {{user?.guarantor.firstName}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Phone Number </h5>
+              <h5 class="name-tag">{{user?.guarantor.phoneNumber}}</h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Gender </h5>
+              <h5 class="name-tag"> {{user?.guarantor.gender}} </h5>
+            </div>
+            <div class="label-tag">
+              <h5 class="main"> Address </h5>
+              <h5 class="name-tag">{{user?.guarantor.address}}</h5>
+            </div>
           </div>
         </div>
       </div>

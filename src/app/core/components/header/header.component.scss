@@ -1,11 +1,42 @@
+.init {
+  position: relative;
+}
+
+.side {
+  padding: 20px 30px;
+  overflow-y: scroll;
+  .side__item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+  }
+  p {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #213F7D;
+  }
+}
 
 header{
-	border: black;
-	border-width: 2px;
+  position: fixed;
+  z-index: 9;
+  background: #fff;
+  width: 100%;
 	box-shadow: 0px 3px 20px 3px rgba(0, 0, 0, 0.06);
+  height: 100px;
 }
 .head_container{
-	padding: 20px;
+  padding-right: 60px;
+  padding-left: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,22 +94,14 @@ header{
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  /* identical to box height */
-  text-decoration-line: underline;
+  text-decoration: underline;
   color: #213F7D;
+  cursor: pointer;
 }
+
 .menu img {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.menu a:hover { 
-	background: rgba(247, 202, 24, 0.1);
-  border:#F7CA18;
-  border-radius: 20px;
-  border-style: solid;
-  border-width: 2px;
-  transition: 0.2s;
 }
 
 .icon{
@@ -126,15 +149,49 @@ menu.responsive{
 
 
 @media screen and (max-width: 835px) {
-	.logo img {
-	    height: 40px;
-	}
+  .menu a{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    padding-bottom: 0;
+  }
+
+  .header_initial {
+    display: flex;
+    align-items: center;
+    position: relative;
+    img {
+      height: 30px;
+    }
+  }
 	ul > li:first-of-type{
 		display:none;
 	}
 	.menu{
 		margin:0;
 	}
+
+  .search {
+    display: none;
+  }
+
+  header {
+    height: 70px;
+    box-shadow: 0px 3px 20px 3px rgba(0, 0, 0, 0.06);
+    .head_container{
+      padding: 20px;
+      overflow: hidden;
+    }
+  }
+
+  .subtitle {
+    color: grey !important;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .header-text {
@@ -175,16 +232,17 @@ menu.responsive{
 
 .sidenav {
 	height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 87px;
-    box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.24);
+  width: 0;
+  display: none;
+  position: relative;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.2s;
+  // padding-top: 87px;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.24);
 }
 
 .sidenav a {

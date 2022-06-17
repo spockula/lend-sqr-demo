@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import sidebarJson from 'src/assets/data/sidebar.json';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  hide: boolean = true;
+  hide: boolean = false;
+  mobileNav = sidebarJson[0];
+  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,11 +19,16 @@ export class HeaderComponent implements OnInit {
   toggle() {
     this.hide = !this.hide;
     const element = window.document.getElementById("mySidenav");
-    console.log('this', this.hide)
     if (this.hide && element !== null) {
-      element.style.width = "250px";
+      element.style.width = "100%";
+      element.style.display = "block";
+      element.style.height = "100vh";
+      element.style.position = "fixed"
     } else if (!this.hide && element !== null) {
       element.style.width = "0";
+      element.style.display = "none";
+      element.style.height = "auto";
+      element.style.position = "relative"
     }
   }
 

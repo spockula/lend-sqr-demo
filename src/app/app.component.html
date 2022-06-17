@@ -1,5 +1,5 @@
 <app-header *ngIf="showHeader !== false"></app-header>
-<div class="main">
+<div class="main" [ngClass]="{'main': url !== '' || url !== 'login','login-main': url === ''}">
   <app-sidebar *ngIf="showSidebar !== false">  </app-sidebar>
   <div>
     <router-outlet></router-outlet>

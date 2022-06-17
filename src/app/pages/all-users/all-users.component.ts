@@ -1,22 +1,30 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import {PaginationInstance} from 'ngx-pagination';
 
 @Component({
   selector: 'app-all-users',
   templateUrl: './all-users.component.html',
-  styleUrls: ['./all-users.component.scss']
+  styleUrls: ['./all-users.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AllUsersComponent implements OnInit {
   showMe: boolean = false;
   ellipseIndex: number = 0;
-  users = []; 
+  users = [];
+  public config: PaginationInstance = {
+    id: 'custom',
+    itemsPerPage: 10,
+    currentPage: 1,
+    totalItems: 100
+  };
   constructor(public router: Router, public mainService: MainService) { }
 
   ngOnInit(): void {
     const checkUsersSaved = localStorage.getItem('users');
     if (checkUsersSaved !== null) {
-      this.users =  JSON.parse(localStorage.getItem("users")!) 
+      this.users =  JSON.parse(localStorage.getItem("users")!)
       console.log('hs', this.users)
     } else {
       this.getUsers();
@@ -25,8 +33,9 @@ export class AllUsersComponent implements OnInit {
 
   toggle(id: number) {
     this.showMe = !this.showMe;
-    // this.ellipseIndex = id;
+    this.ellipseIndex = id;
   }
+
 
   routeToDetails(userId: any) {
     this.router.navigateByUrl('details/' + userId)

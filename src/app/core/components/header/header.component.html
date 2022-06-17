@@ -1,15 +1,15 @@
 <header>
   <div class="head_container">
     <div class="header_initial">
-        <img src="./assets/img/icons/logo.png">
-        <div class="search">
-           <input type="text" class="searchTerm" placeholder="Search for anything">
-           <button type="submit" class="searchButton">
-             <img src="./assets/img/icons/search.png" class="searchIcon" >
-          </button>
+      <img class="logo" src="./assets/img/icons/logo.png">
+      <div class="search">
+        <input type="text" class="searchTerm" placeholder="Search for anything">
+        <button type="submit" class="searchButton">
+            <img src="./assets/img/icons/search.png" class="searchIcon" >
+        </button>
       </div>
     </div>
-   
+
     <div class="menu" id="myTopnav">
       <ul>
         <a style="font-size:15px;" class="icon" (click)="toggle()">&#9776;</a>
@@ -21,7 +21,7 @@
             <select>
               <option value="Option 1">Adedeji</option>
             </select>
-          </div> 
+          </div>
         </li>
       </ul>
     </div>
@@ -29,10 +29,36 @@
 </header>
 <div id="mySidenav" class="sidenav">
     <a  class="closebtn" (click)="toggle()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Request Quote</a>
-    <a href="#">Contact</a>
-    <p style="color: #1c3664; text-align: center">Hubover &copy; 2017</p>
+    <div class="side">
+      <div class="side__item">
+        <img src="./assets/img/icons/guarantor.png">
+        <p> Switch Organization </p>
+        <div class="select-dropdown">
+          <select>
+            <option value="Option 1"> </option>
+          </select>
+        </div>
+      </div>
+      <div class="side__item">
+        <img src="./assets/img/icons/dashboard.png">
+        <p> Dashboard </p>
+      </div>
+      <p class="subtitle"> CUSTOMERS </p>
+      <div class="side__item" *ngFor="let item of mobileNav['customers'];">
+        <img src="{{item.image}}">
+        <p> {{item.title}} </p>
+      </div>
+      <p class="subtitle"> BUSINESSES </p>
+      <div class="side__item" *ngFor="let item of mobileNav['Businesses'];">
+        <img src="{{item.image}}">
+        <p> {{item.title}} </p>
+      </div>
+      <p class="subtitle"> SETTINGS </p>
+      <div class="side__item" *ngFor="let item of mobileNav['Settings'];">
+        <img src="{{item.image}}">
+        <p> {{item.title}} </p>
+      </div>
+
+    </div>
+    <p style="color: #1c3664; text-align: center">Ogu Chinedu &copy; 2017</p>
 </div>

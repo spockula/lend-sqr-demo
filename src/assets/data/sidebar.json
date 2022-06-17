@@ -1,0 +1,110 @@
+[
+  {
+    "customers": [
+      {
+        "image": "./assets/img/icons/users-sidebar.png",
+        "title": "Users",
+        "shortName": "users"
+      },
+      {
+        "image": "./assets/img/icons/users-side.png",
+        "title": "Guarantors",
+        "shortName": "guarantors"
+      },
+      {
+        "image": "./assets/img/icons/sack.png",
+        "title": "Loans",
+        "shortName": "loans"
+      },
+      {
+        "image": "./assets/img/icons/decision.png",
+        "title": "Decision Models",
+        "shortName": "decision"
+      },
+      {
+        "image": "./assets/img/icons/piggy-bank.png",
+        "title": "Savings",
+        "shortName": "savings"
+      },
+      {
+        "image": "./assets/img/icons/loan_request.png",
+        "title": "Loan Requests",
+        "shortName": "loan"
+      },
+      {
+        "image": "./assets/img/icons/whitelist.png",
+        "title": "Whitelist",
+        "shortName": "whitelist"
+      },
+      {
+        "image": "./assets/img/icons/karma.png",
+        "title": "Karma",
+        "shortName": "karma"
+      }
+    ],
+    "Businesses": [
+      {
+        "image": "./assets/img/icons/guarantor.png",
+        "title": "Organization",
+        "shortName": "oraganization"
+      },
+      {
+        "image": "./assets/img/icons/loan_request.png",
+        "title": "Loan Products",
+        "shortName": "products"
+      },
+      {
+        "image": "./assets/img/icons/savings_products.png",
+        "title": "Savings Products",
+        "shortName": "savings_extra"
+      },
+      {
+        "image": "./assets/img/icons/fees.png",
+        "title": "Fees and Charges",
+        "shortName": "fees"
+      },
+      {
+        "image": "./assets/img/icons/transactions.png",
+        "title": "Transactions",
+        "shortName": "transactions"
+      },
+      {
+        "image": "./assets/img/icons/services.png",
+        "title": "Services",
+        "shortName": "services"
+      },
+      {
+        "image": "./assets/img/icons/service_account.png",
+        "title": "Service Account",
+        "shortName": "account"
+      },
+      {
+        "image": "./assets/img/icons/scroll.png",
+        "title": "Settlements",
+        "shortName": "settlements"
+      },
+      {
+        "image": "./assets/img/icons/reports.png",
+        "title": "Reports",
+        "shortName": "reports"
+      }
+    ],
+    "Settings": [
+      {
+        "image": "./assets/img/icons/preferences.png",
+        "title": "Preferences",
+        "shortName": "preferences"
+      },
+      {
+        "image": "./assets/img/icons/fees.png",
+        "title": "Fees and Pricing",
+        "shortName": "pricing"
+      },
+      {
+        "image": "./assets/img/icons/audit.png",
+        "title": "Audit Logs",
+        "shortName": "audit"
+      }
+    ]
+  }
+]

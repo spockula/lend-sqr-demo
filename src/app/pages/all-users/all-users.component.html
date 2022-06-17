@@ -1,33 +1,33 @@
 <div class="container">
-  <main class="main-body">
+  <div class="main-body">
     <p class="title"> Users </p>
     <div class="card-container">
       <div class="card">
         <div class="card_div">
           <img src="./assets/img/icons/users.png">
           <p class="card-title"> Users </p>
-          <p class="card-numbers"> 2,453 </p>
+          <p class="card-numbers">{{users.length}} </p>
         </div>
       </div>
       <div class="card">
         <div class="card_div">
           <img src="./assets/img/icons/others.png">
           <p class="card-title"> Active Users </p>
-          <p class="card-numbers"> 2,453 </p>
+          <p class="card-numbers"> {{users.length}} </p>
         </div>
       </div>
       <div class="card">
         <div class="card_div">
           <img src="./assets/img/icons/loans.png">
           <p class="card-title"> Users with Loans </p>
-          <p class="card-numbers"> 12,453 </p>
+          <p class="card-numbers"> {{users.length}} </p>
         </div>
       </div>
       <div class="card">
         <div class="card_div">
           <img src="./assets/img/icons/savings.png">
           <p class="card-title"> Users with Savings </p>
-          <p class="card-numbers"> 102,453 </p>
+          <p class="card-numbers"> {{users.length /2}} </p>
         </div>
       </div>
     </div>
@@ -57,55 +57,32 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of users; let i = index;">
+            <tr *ngFor="let item of users | paginate: config; let i = index;">
               <td class="main-table">
-                <span (click)="routeToDetails(item['id'])"> {{item['orgName']}} </span>
+                <span (click)="routeToDetails(item['id'])"> {{item['orgName'] | slice:0:15}}  {{ item['orgName']['length'] > 16 ? '...' : '' }} </span>
               </td>
               <td class="main-table">
-                <span> {{item['userName']}} </span>
+                <span> {{item['userName'] | slice:0:15}}  {{ item['userName']['length'] > 16 ? '...' : '' }} </span>
               </td>
               <td class="main-table">
-                <span> {{item['email']}} </span>
+                <span> {{item['email'] | slice:0:18}}  {{ item['email']['length'] > 19 ? '...' : '' }} </span>
               </td>
               <td class="main-table">
-                <span> {{item['phoneNumber']}} </span>
+                <span> {{item['phoneNumber'] | slice:0:12}}  {{ item['phoneNumber']['length'] > 12 ? '...' : '' }} </span>
               </td>
               <td class="main-table">
-                <span> {{item['createdAt']}} </span>
+                <span> {{item['createdAt']| date: "YYYY-MM-dd, h:mm a"}} </span>
               </td>
               <td class="main-table">
                 <button class="table-button-inactive"> <span> Inactive</span> </button>
               </td>
-              <td>
-                <img src="./assets/img/icons/ellipsis.png">
-              </td>
-            </tr>
-            <tr>
-              <td class="main-table">
-                <span> Lendsqr </span>
-              </td>
-              <td class="main-table">
-                <span> Adedeji </span>
-              </td>
-              <td class="main-table">
-                <span> adedeji@lendsqr.com </span>
-              </td>
-              <td class="main-table">
-                <span> 08078903721 </span>
-              </td>
-              <td class="main-table">
-                <span> May 15, 2020 10:00 AM </span>
-              </td>
-              <td class="main-table">
-                <button class="table-button-pending"> <span> pending</span> </button>
-              </td>
-              <td>
-                <img (click)="toggle(1)" src="./assets/img/icons/ellipsis.png">
-                <div class="dropdown-inner" *ngIf="showMe">
+              <td class="toggle">
+                <img class="ellipsis" (click)="toggle(i)" src="./assets/img/icons/ellipsis.png">
+                <div class="dropdown-inner" *ngIf="showMe && ellipseIndex === i">
                   <div class="edit-div">
-                    <h6 class="drop-text"> View Details </h6>
-                    <h6 class="drop-text"> Blacklist User </h6>
-                    <h6 class="drop-text"> Activate User </h6>
+                    <h6 class="drop-text" (click)="routeToDetails(item['id'])"> <img src="./assets/img/icons/view_details.png"> View Details </h6>
+                    <h6 class="drop-text"> <img src="./assets/img/icons/deactivate.png"> Blacklist User </h6>
+                    <h6 class="drop-text"> <img src="./assets/img/icons/activate.png"> Activate User </h6>
                   </div>
                 </div>
               </td>
@@ -113,6 +90,29 @@
           </tbody>
         </table>
       </div>
+      <pagination-template #p="paginationApi"
+        (pageChange)="config.currentPage = $event">
+          <div class="page-box">
+            <p>Showing </p>
+            <span class="box"> 
+              <select >
+                <option value="Option 1">  {{config.itemsPerPage}} </option>
+              </select> 
+            </span>
+            <p>out of 100 </p>
+          </div>
+          <div class="custom-pagination">
+            <div class="pagination-previous">
+              <a  (click)="p.previous()"> < </a>
+            </div>
+            <div class="numbers">
+              <a class="active"> 1 </a> <a>2</a> <a>3</a> <a>...</a> <a>9</a> <a>10</a>
+            </div>
+            <div class="pagination-next">
+              <a *ngIf="!p.isLastPage()" (click)="p.next()"> > </a>
+            </div>
+          </div>
+        </pagination-template>
     </div>
-  </main>
+  </div>
 </div>

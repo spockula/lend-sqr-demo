@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
+import {PaginationInstance} from 'ngx-pagination';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +11,12 @@ import { MainService } from 'src/app/services/main.service';
 export class DashboardComponent implements OnInit {
   showMe: boolean = false;
   ellipseIndex: number = 0;
+  public config: PaginationInstance = {
+    id: 'custom',
+    itemsPerPage: 10,
+    currentPage: 1,
+    totalItems: 100
+  };
   users = []; 
   constructor(public router: Router, public mainService: MainService) { }
 

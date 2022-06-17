@@ -31,7 +31,7 @@ const routes: Routes = [
     component: AllUsersComponent,
     data: { showHeader: true, showSidebar: true }
   },
-  
+
 ];
 
 @NgModule({

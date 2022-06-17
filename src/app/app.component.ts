@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   title = 'lend-sqr-test';
   showHeader: boolean = true;
   showSidebar: boolean = true;
+  url: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (this.route.firstChild !== null) {
+          this.url = this.route.firstChild.snapshot.routeConfig?.path;
           this.showHeader = this.route.firstChild.snapshot.data["showHeader"];
           this.showSidebar = this.route.firstChild.snapshot.data["showSidebar"];
         }

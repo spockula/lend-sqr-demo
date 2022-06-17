@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import  sidebarJson from 'src/assets/data/sidebar.json';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,15 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  selectedTab: string = '';
+  selectedTab: string = 'users';
   backHome: boolean = true;
+  sideNav = sidebarJson[0];
+
   constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
-  switchTabs(selectedTab: string) {
-    this.selectedTab = selectedTab;
+  switchTabs(tab: any) {
+    this.selectedTab = tab;
   }
 
 }

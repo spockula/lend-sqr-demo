@@ -11,7 +11,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 60px;
   margin-top: 48px;
 }
 
@@ -24,11 +24,6 @@
 
 .login-form {
   padding-top: 25px;
-  padding-left: 25px;
-  // display: flex;
-  // flex-direction: column;
-  justify-content: center;
-  width: 50%;
 }
 
 .welcome{
@@ -48,7 +43,7 @@
   font-style: normal;
   font-weight: 200;
   font-size: 20px;
-  line-height: 27px; 
+  line-height: 27px;
   margin: 0;
   /* identical to box height */
   color: #545F7D;
@@ -72,7 +67,6 @@
   opacity: 0.6;
   outline-offset: 2px;
   height: 50px;
-  width: 100%;
   color: #545F7D;
   background: #FFFFFF;
   border: 2px solid rgba(84, 95, 125, 0.15);
@@ -82,8 +76,8 @@
 .input-cont p {
   font-family: 'Overpass', sans-serif;
   position: absolute;
-  top: 54%;
-  right: 20%;
+  top: 47%;
+  right: 14%;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -91,7 +85,6 @@
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   color: #39CDCC;
 }
 
@@ -114,14 +107,8 @@
 }
 
 .login-button {
-  margin-top: 3rem;
   position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 12px 40px !important;
-  position: static;
+  width: 447px;
   height: 48px;
   background-color: #39CDCC !important;
   justify-content: center;
@@ -129,11 +116,8 @@
   border-color: transparent;
   font-weight: 500;
   border-radius: 8px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 24px 0px;
   color: white;
+  margin: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -141,8 +125,12 @@
     padding: 0;
   }
   .grid {
-    display: grid;
-    grid-template: none !important;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-gap: 0px;
+    margin: 0;
   }
 
   .login-image {
@@ -154,13 +142,39 @@
 
     &:not(.highlight-card) {
       height: auto;
-      // margin: 8px 0;
     }
   }
   .login-form {
-      padding-top: 10px;
-      padding-left: 25px;
-      justify-content: center;
-      width: 80%;
+      padding-top: 30px;
+  }
+  .input {
+    width: 296px;
+    position: relative;
+  }
+
+  .login-button {
+    width: 308px;
+  }
+
+  .input-div {
+    padding-bottom: 30px;
+  }
+
+  .container .logo {
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .input-cont p {
+    top: 15%;
+    right: 6%;
+    position: absolute;
   }
 }

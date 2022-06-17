@@ -1,9 +1,11 @@
 .container {
-  align-items: center;
-  padding-left: 240px;
-  padding-right: 40px;
+  margin-left: 270px;
   .main-body {
-    padding: 10px;
+    padding-top: 90px;
+    padding-left: 30px;
+    background: rgba(255, 255, 255, 0.45);
+    padding-right: 30px;
+    padding-bottom: 3rem;
     .title {
       font-family: 'Work Sans';
       font-style: normal;
@@ -80,14 +82,22 @@
 }
 
 .card-mini {
-  display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
-  width: 47%;
+  display: flex;
+  // justify-content: space-between;
+  width: 65%;
+  padding-top: 2rem;
+}
+
+.card-holder__container{
+  height: 5rem;
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card-holder {
-  padding: 20px;
-  width: 9rem;
+  padding: 0 20px;
   img {
     width: 100px;
   }
@@ -96,31 +106,13 @@
   }
 }
 
-.card-holder1 {
-  padding: 20px;
-  width: 10rem;
-  img {
-    width: 100px;
-  }
-  .another {
-    display: flex;
-  }
+.card-holder__content:nth-child(2) {
+  border-left: 0.5px solid rgba(84,95,125, 0.2);
+  border-right: 0.5px solid rgba(84,95,125, 0.2);
 }
+.card-holder__content {
+  padding: 0 20px;
 
-.card-holder2 {
-  padding: 20px;
-  width: 9rem;
-  img {
-    width: 100px;
-  }
-  .another {
-    display: flex;
-  }
-}
-
-.card-holder3 {
-  padding: 20px;
-  width: 12rem;
   img {
     width: 100px;
   }
@@ -132,13 +124,17 @@
 .tabs-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
-  padding-left: 30px;
+  grid-template-columns: repeat(6,minmax(0,1fr));
+  padding: 2.5rem 1.5rem 0 1.5rem;
 }
 
 .easy-tab {
   border-bottom: 2px solid #39CDCC;
   width: 170px;
+}
+
+.tabless {
+  width: 118px;
 }
 
 .tab-text {
@@ -152,6 +148,19 @@
   margin: 0;
   padding-bottom: 5px;
   color: #39CDCC;
+}
+
+.tab-text-black {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: center;
+  margin: 0;
+  padding-bottom: 5px;
+  color: rgba(0, 0, 0, 0.8);;
 }
 
 .other-text {
@@ -168,14 +177,17 @@
 .extra-container {
   padding-top: 30px;
   width: 100%;
+  padding-bottom: 2rem;
+  background: #FFFFFF;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   .last-container {
-    background: #FFFFFF;
     border: 1px solid rgba(33, 63, 125, 0.06);
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
-    padding: 20px;
     width: 100%;
-    border-bottom: 1px gray;
+    .last_container_content {
+      padding: 20px;
+      border-bottom: 1px gray;
+    }
   }
 }
 
@@ -220,7 +232,6 @@
   font-size: 14px;
   line-height: 16px;
   margin: 0;
-  padding-left: 22px;
   padding-top: 23px;
   color: #545F7D;
 }
@@ -265,4 +276,97 @@
   margin: 0;
   /* identical to box height */
   color: #545F7D;
+}
+
+@media (max-width: 768px) { 
+  .container {
+    margin: 0 !important;
+    .main-body {
+      padding-top: 0;
+      .d-table {
+        display: flex;
+        flex-direction: column;
+      }
+      .first-section {
+        display: block;
+        width: 100%;
+      }
+      .card-main {
+        width: 100%;
+        margin-top: 20px;
+        background: #FFFFFF;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
+        border-radius: 4px;
+        display: block;
+        overflow-x: hidden;
+        .card-mini {
+          display: inline-block;
+          width: 100%;
+          padding-top: 2rem;
+          overflow-x: scroll;
+          .card-holder {
+            padding: 0 !important;
+            text-align: center;
+          }
+          .card-holder__container {
+            height: 13rem;
+            width: 100%;
+            margin-top: 0.2rem;
+            display: inline-block;
+            text-align: center;
+            overflow-x: scroll;
+          }
+          .card-holder__content {
+            padding: 0;
+          }
+          .card-holder__content:nth-child(2) {
+            border-left: 0;
+            border-right: 0;
+          }
+        }
+        .tabs-container {
+          width: 100%;
+          display: inline-flex;
+          overflow-x: scroll;
+          padding: 2.5rem 1.5rem 0 1.5rem;
+          .tab-text {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            margin: 0;
+            width: inherit;
+            padding-bottom: 5px;
+            color: #39CDCC;
+          }
+          .tab-text-black {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            margin: 0;
+            width: inherit;
+            padding-bottom: 5px;
+            color: rgba(0, 0, 0, 0.8);
+          }
+          .last-tab {
+            width: 130px !important;
+          }
+        }
+      }
+    }
+  }
+  .tar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .blacklist {
+    margin: 6px;
+  }
 }
