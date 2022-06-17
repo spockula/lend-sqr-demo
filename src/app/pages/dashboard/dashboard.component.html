@@ -80,9 +80,9 @@
                 <img (click)="toggle(i)" src="./assets/img/icons/ellipsis.png">
                 <div class="dropdown-inner" *ngIf="showMe && ellipseIndex === i">
                   <div class="edit-div">
-                    <h6 class="drop-text" (click)="routeToDetails(item['id'])"> View Details </h6>
-                    <h6 class="drop-text"> Blacklist User </h6>
-                    <h6 class="drop-text"> Activate User </h6>
+                    <h6 class="drop-text" (click)="routeToDetails(item['id'])"> <img src="./assets/img/icons/view_details.png"> View Details </h6>
+                    <h6 class="drop-text"> <img src="./assets/img/icons/deactivate.png"> Blacklist User </h6>
+                    <h6 class="drop-text"> <img src="./assets/img/icons/activate.png"> Activate User </h6>
                   </div>
                 </div>
               </td>
