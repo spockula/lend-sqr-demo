@@ -39,22 +39,26 @@
           </select>
         </div>
       </div>
-      <div class="side__item">
+      <div class="side__item"
+      routerLink="/dashboard" (click)="toggle()">
         <img src="./assets/img/icons/dashboard.png">
         <p> Dashboard </p>
       </div>
       <p class="subtitle"> CUSTOMERS </p>
-      <div class="side__item" *ngFor="let item of mobileNav['customers'];">
+      <div class="side__item" *ngFor="let item of mobileNav['customers'];"
+       routerLink="/all-users" (click)="toggle()">
         <img src="{{item.image}}">
         <p> {{item.title}} </p>
       </div>
       <p class="subtitle"> BUSINESSES </p>
-      <div class="side__item" *ngFor="let item of mobileNav['Businesses'];">
+      <div class="side__item" *ngFor="let item of mobileNav['Businesses'];"
+      routerLink="/all-users" (click)="toggle()">
         <img src="{{item.image}}">
         <p> {{item.title}} </p>
       </div>
       <p class="subtitle"> SETTINGS </p>
-      <div class="side__item" *ngFor="let item of mobileNav['Settings'];">
+      <div class="side__item" *ngFor="let item of mobileNav['Settings'];"
+      routerLink="/all-users" (click)="toggle()">
         <img src="{{item.image}}">
         <p> {{item.title}} </p>
       </div>
